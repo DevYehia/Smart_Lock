@@ -28,6 +28,7 @@ void Timer0ACapture_init(void){
 
 void Timer1_init(void){
   Set_Bit(SYSCTL_RCGCTIMER_R,1);
+  while((SYSCTL_PRTIMER_R&0x2) == 0);
   TIMER1_CTL_R = 0;
   TIMER1_CFG_R = 0x0;
   Set_Bit(TIMER1_TAMR_R,1);
@@ -40,13 +41,15 @@ void Timer1_init(void){
 }
 
 void Timer1_setDelay(void){
-  TIMER1_TAILR_R =0x1869FF;
-  TIMER1_TBILR_R = 0x18;
+    //For one minute	
+  TIMER1_TAILR_R =960000000;
+  //TIMER1_TBILR_R = 0x18;
 }
 
 
 void Timer1_start(void){
-  
+
+	
     TIMER1_CTL_R=0x01;
 }
 
@@ -75,6 +78,7 @@ void Timer2_init(void){
 }
 
 void Timer2_setDelay(void){
+	
   TIMER2_TAILR_R =0xF423FF;
   TIMER2_TBILR_R = 0xF4;
 }

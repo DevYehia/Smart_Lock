@@ -1,0 +1,15 @@
+--cpu=Cortex-M4.fp.sp
+".\main.o"
+".\bluetooth.o"
+".\ultrasonic.o"
+".\dio.o"
+".\interrupt.o"
+".\systicktimer.o"
+".\timers.o"
+".\uart.o"
+".\startup_tm4c123.o"
+".\system_tm4c123.o"
+--strict --scatter ".\smartLock.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\smartLock.map" -o .\smartLock.axf
