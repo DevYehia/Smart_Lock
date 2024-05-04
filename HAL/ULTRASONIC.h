@@ -5,12 +5,12 @@
 #include "../MCAL/TIMERS.h"
 #include "../MCAL/SYSTICKTimer.h"
 
-#define ECHO_PORT PORT_B
-#define ECHO_PIN  PIN6
 
-#define TRIGGER_PORT PORT_A
-#define TRIGGER_PIN  PIN4
+#define ULTRASONIC_TRIGGER_PORT PORT_A
+#define ULTRASONIC_TRIGGER_PIN 	PIN4
 
+#define ULTRASONIC_ECHO_PORT		PORT_B
+#define ULTRASONIC_ECHO_PIN			PIN6
 
 void ultrasonic_Init(void);
 //uint32 Measure_distance(void);

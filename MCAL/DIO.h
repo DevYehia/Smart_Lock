@@ -30,8 +30,7 @@
 #define LOGIC_LOW 0
 
 #define NO_PR -1
-#define PUR 1
-#define PDR 0
+
 
 uint8 DIO_Init(uint8 PORT);
 uint8 DIO_WritePort(uint8 PORT,uint8 VALUE);

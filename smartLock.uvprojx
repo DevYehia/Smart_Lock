@@ -134,8 +134,7 @@
             <RunIndependent>0</RunIndependent>
             <UpdateFlashBeforeDebugging>1</UpdateFlashBeforeDebugging>
             <Capability>1</Capability>
-            <Capability>1</Capability>
-            <DriverSelection>-1</DriverSelection>
+            <DriverSelection>1</DriverSelection>
           </Flash1>
           <bUseTDR>1</bUseTDR>
           <Flash2>BIN\UL2CM3.DLL</Flash2>
@@ -414,6 +413,16 @@
               <FileName>ULTRASONIC.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\HAL\ULTRASONIC.h</FilePath>
+            </File>
+            <File>
+              <FileName>BUZZER.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\HAL\BUZZER.c</FilePath>
+            </File>
+            <File>
+              <FileName>BUZZER.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\HAL\BUZZER.h</FilePath>
             </File>
           </Files>
         </Group>

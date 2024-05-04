@@ -3,6 +3,8 @@
 
 #include "../MCAL/DIO.h"
 
+#define BUZZER_PORT PORT_B
+#define BUZZER_PIN PIN2
 
 void buzzerInit(uint8 port, uint8 pin);
 void buzzerON(uint8 port,uint8 pin);

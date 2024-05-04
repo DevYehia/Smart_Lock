@@ -22,43 +22,200 @@ Dialog DLL:      TCM.DLL V1.56.4.0
  
 <h2>Project:</h2>
 C:\Users\user\Desktop\Spring 24\Wireless Networks\Smart_Lock\smartLock.uvprojx
-Project File Date:  05/04/2024
+Project File Date:  05/05/2024
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.21', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Rebuild target 'Target 1'
-compiling DIO.c...
-compiling ULTRASONIC.c...
-assembling startup_TM4C123.s...
-compiling TIMERS.c...
-compiling system_TM4C123.c...
-compiling INTERRUPT.c...
 compiling SYSTICKTimer.c...
+assembling startup_TM4C123.s...
 compiling BLUETOOTH.c...
-main.c(39): warning: passing 'char[28]' to parameter of type 'uint8 *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
-   39 |         bluetooth_Write_String("Please Enter the Password: ");
+compiling INTERRUPT.c...
+compiling UART.c...
+compiling TIMERS.c...
+compiling DIO.c...
+compiling BUZZER.c...
+compiling ULTRASONIC.c...
+compiling system_TM4C123.c...
+main.c(4): warning: non-portable path to file '"TM4C123GH6PM.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+    4 | #include "tm4c123gh6pm.h" 
+      |          ^~~~~~~~~~~~~~~~
+      |          "TM4C123GH6PM.h"
+main.c(4): warning: In file included from...
+C:/Users/user/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123\tm4c123gh6pm.h(1617): warning: 'UART0' macro redefined [-Wmacro-redefined]
+ 1617 | #define UART0                           ((UART0_Type              *) UART0_BASE)
+      |         ^
+./HAL/../MCAL/UART.h(7): note: previous definition is here
+    7 | #define UART0 0 
+      |         ^
+main.c(4): warning: In file included from...
+C:/Users/user/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123\tm4c123gh6pm.h(1618): warning: 'UART1' macro redefined [-Wmacro-redefined]
+ 1618 | #define UART1                           ((UART0_Type              *) UART1_BASE)
+      |         ^
+./HAL/../MCAL/UART.h(8): note: previous definition is here
+    8 | #define UART1 1 
+      |         ^
+main.c(4): warning: In file included from...
+C:/Users/user/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123\tm4c123gh6pm.h(1619): warning: 'UART2' macro redefined [-Wmacro-redefined]
+ 1619 | #define UART2                           ((UART0_Type              *) UART2_BASE)
+      |         ^
+./HAL/../MCAL/UART.h(9): note: previous definition is here
+    9 | #define UART2 2 
+      |         ^
+main.c(4): warning: In file included from...
+C:/Users/user/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123\tm4c123gh6pm.h(1620): warning: 'UART3' macro redefined [-Wmacro-redefined]
+ 1620 | #define UART3                           ((UART0_Type              *) UART3_BASE)
+      |         ^
+./HAL/../MCAL/UART.h(10): note: previous definition is here
+   10 | #define UART3 3 
+      |         ^
+main.c(4): warning: In file included from...
+C:/Users/user/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123\tm4c123gh6pm.h(1621): warning: 'UART4' macro redefined [-Wmacro-redefined]
+ 1621 | #define UART4                           ((UART0_Type              *) UART4_BASE)
+      |         ^
+./HAL/../MCAL/UART.h(11): note: previous definition is here
+   11 | #define UART4 4 
+      |         ^
+main.c(4): warning: In file included from...
+C:/Users/user/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123\tm4c123gh6pm.h(1622): warning: 'UART5' macro redefined [-Wmacro-redefined]
+ 1622 | #define UART5                           ((UART0_Type              *) UART5_BASE)
+      |         ^
+./HAL/../MCAL/UART.h(12): note: previous definition is here
+   12 | #define UART5 5 
+      |         ^
+main.c(4): warning: In file included from...
+C:/Users/user/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123\tm4c123gh6pm.h(1623): warning: 'UART6' macro redefined [-Wmacro-redefined]
+ 1623 | #define UART6                           ((UART0_Type              *) UART6_BASE)
+      |         ^
+./HAL/../MCAL/UART.h(13): note: previous definition is here
+   13 | #define UART6 6 
+      |         ^
+main.c(4): warning: In file included from...
+C:/Users/user/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123\tm4c123gh6pm.h(1624): warning: 'UART7' macro redefined [-Wmacro-redefined]
+ 1624 | #define UART7                           ((UART0_Type              *) UART7_BASE)
+      |         ^
+./HAL/../MCAL/UART.h(14): note: previous definition is here
+   14 | #define UART7 7 
+      |         ^
+main.c(72): warning: passing 'char[28]' to parameter of type 'uint8 *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+   72 |         bluetooth_Write_String("Please Enter the Password: ");
       |                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ./HAL/BLUETOOTH.h(15): note: passing argument to parameter 'str' here
    15 | void bluetooth_Write_String(uint8 *str);
       |                                    ^
-main.c(44): warning: passing 'char[13]' to parameter of type 'uint8 *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
-   44 |                                 bluetooth_Write_String("Welcome Home");
-      |                                                        ^~~~~~~~~~~~~~
+main.c(77): warning: passing 'char[14]' to parameter of type 'uint8 *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+   77 |                                 bluetooth_Write_String("Welcome Home\n");
+      |                                                        ^~~~~~~~~~~~~~~~
 ./HAL/BLUETOOTH.h(15): note: passing argument to parameter 'str' here
    15 | void bluetooth_Write_String(uint8 *str);
       |                                    ^
-main.c(47): warning: passing 'char[26]' to parameter of type 'uint8 *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
-   47 |                         bluetooth_Write_String("Wrong Password Try Again!");
-      |                                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.c(80): warning: passing 'char[27]' to parameter of type 'uint8 *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+   80 |                         bluetooth_Write_String("Wrong Password Try Again!\n");
+      |                                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ./HAL/BLUETOOTH.h(15): note: passing argument to parameter 'str' here
    15 | void bluetooth_Write_String(uint8 *str);
       |                                    ^
-3 warnings generated.
+main.c(95): warning: passing 'char[71]' to parameter of type 'uint8 *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+   95 |                 bluetooth_Write_String("  0: open kitchen door     1: open garage door     2: open front door\n");
+      |                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./HAL/BLUETOOTH.h(15): note: passing argument to parameter 'str' here
+   15 | void bluetooth_Write_String(uint8 *str);
+      |                                    ^
+main.c(96): warning: passing 'char[74]' to parameter of type 'uint8 *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+   96 |                 bluetooth_Write_String("  3: open kitchen window   4: open outside window  5: close kitchen door\n");
+      |                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./HAL/BLUETOOTH.h(15): note: passing argument to parameter 'str' here
+   15 | void bluetooth_Write_String(uint8 *str);
+      |                                    ^
+main.c(97): warning: passing 'char[76]' to parameter of type 'uint8 *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+   97 |                 bluetooth_Write_String("  6: close garage door     7: close front door     8: close kitchen window\n");
+      |                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./HAL/BLUETOOTH.h(15): note: passing argument to parameter 'str' here
+   15 | void bluetooth_Write_String(uint8 *str);
+      |                                    ^
+main.c(98): warning: passing 'char[27]' to parameter of type 'uint8 *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+   98 |                 bluetooth_Write_String("  9: close outside window\n");
+      |                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./HAL/BLUETOOTH.h(15): note: passing argument to parameter 'str' here
+   15 | void bluetooth_Write_String(uint8 *str);
+      |                                    ^
+main.c(106): warning: passing 'char[27]' to parameter of type 'uint8 *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  106 |                                 bluetooth_Write_String("Wrong Option, Try Again!!\n");
+      |                                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./HAL/BLUETOOTH.h(15): note: passing argument to parameter 'str' here
+   15 | void bluetooth_Write_String(uint8 *str);
+      |                                    ^
+main.c(113): warning: passing 'char[34]' to parameter of type 'uint8 *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  113 |                                                                 bluetooth_Write_String("Kitchen door opened successfully!");
+      |                                                                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./HAL/BLUETOOTH.h(15): note: passing argument to parameter 'str' here
+   15 | void bluetooth_Write_String(uint8 *str);
+      |                                    ^
+main.c(117): warning: passing 'char[33]' to parameter of type 'uint8 *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  117 |                                                                 bluetooth_Write_String("Garage door opened successfully!");
+      |                                                                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./HAL/BLUETOOTH.h(15): note: passing argument to parameter 'str' here
+   15 | void bluetooth_Write_String(uint8 *str);
+      |                                    ^
+main.c(121): warning: passing 'char[32]' to parameter of type 'uint8 *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  121 |                                                                 bluetooth_Write_String("Front door opened successfully!");
+      |                                                                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./HAL/BLUETOOTH.h(15): note: passing argument to parameter 'str' here
+   15 | void bluetooth_Write_String(uint8 *str);
+      |                                    ^
+main.c(125): warning: passing 'char[36]' to parameter of type 'uint8 *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  125 |                                                                 bluetooth_Write_String("Kitchen window opened successfully!");
+      |                                                                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./HAL/BLUETOOTH.h(15): note: passing argument to parameter 'str' here
+   15 | void bluetooth_Write_String(uint8 *str);
+      |                                    ^
+main.c(129): warning: passing 'char[36]' to parameter of type 'uint8 *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  129 |                                                                 bluetooth_Write_String("Outside window opened successfully!");
+      |                                                                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./HAL/BLUETOOTH.h(15): note: passing argument to parameter 'str' here
+   15 | void bluetooth_Write_String(uint8 *str);
+      |                                    ^
+main.c(133): warning: passing 'char[34]' to parameter of type 'uint8 *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  133 |                                                                 bluetooth_Write_String("Kitchen door closed successfully!");
+      |                                                                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./HAL/BLUETOOTH.h(15): note: passing argument to parameter 'str' here
+   15 | void bluetooth_Write_String(uint8 *str);
+      |                                    ^
+main.c(137): warning: passing 'char[33]' to parameter of type 'uint8 *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  137 |                                                                 bluetooth_Write_String("Garage door closed successfully!");
+      |                                                                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./HAL/BLUETOOTH.h(15): note: passing argument to parameter 'str' here
+   15 | void bluetooth_Write_String(uint8 *str);
+      |                                    ^
+main.c(141): warning: passing 'char[32]' to parameter of type 'uint8 *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  141 |                                                                 bluetooth_Write_String("Front door closed successfully!");
+      |                                                                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./HAL/BLUETOOTH.h(15): note: passing argument to parameter 'str' here
+   15 | void bluetooth_Write_String(uint8 *str);
+      |                                    ^
+main.c(145): warning: passing 'char[36]' to parameter of type 'uint8 *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  145 |                                                                 bluetooth_Write_String("Kitchen window closed successfully!");
+      |                                                                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./HAL/BLUETOOTH.h(15): note: passing argument to parameter 'str' here
+   15 | void bluetooth_Write_String(uint8 *str);
+      |                                    ^
+main.c(149): warning: passing 'char[36]' to parameter of type 'uint8 *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  149 |                                                                 bluetooth_Write_String("Outside window closed successfully!");
+      |                                                                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./HAL/BLUETOOTH.h(15): note: passing argument to parameter 'str' here
+   15 | void bluetooth_Write_String(uint8 *str);
+      |                                    ^
+main.c(205): warning: passing 'char[29]' to parameter of type 'uint8 *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  205 |         bluetooth_Write_String("Someone is near, take care!!");
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./HAL/BLUETOOTH.h(15): note: passing argument to parameter 'str' here
+   15 | void bluetooth_Write_String(uint8 *str);
+      |                                    ^
+28 warnings generated.
 compiling main.c...
-compiling UART.c...
 linking...
-Program Size: Code=3810 RO-data=722 RW-data=4 ZI-data=620  
-".\smartLock.axf" - 0 Error(s), 3 Warning(s).
+Program Size: Code=4274 RO-data=1370 RW-data=4 ZI-data=620  
+".\smartLock.axf" - 0 Error(s), 28 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -87,7 +244,7 @@ Package Vendor: Keil
       Source file:   Device/Source/system_TM4C123.c
       Source file:   Device/Source/ARM/startup_TM4C123.s
       Include file:  Device/Include/TM4C123/TM4C123.h
-Build Time Elapsed:  00:00:00
+Build Time Elapsed:  00:00:01
 </pre>
 </body>
 </html>

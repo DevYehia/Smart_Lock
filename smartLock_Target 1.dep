@@ -1,14 +1,21 @@
 Dependencies for Project 'smartLock', Target 'Target 1': (DO NOT MODIFY !)
 CompilerVersion: 6210000::V6.21::ARMCLANG
-F (.\main.c)(0x66369A95)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections-I./RTE/_Target_1-IC:/Users/user/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/user/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="539" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./main.o -MD)
+F (.\main.c)(0x6636A4D5)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections-I./RTE/_Target_1-IC:/Users/user/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/user/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="539" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./main.o -MD)
 I (HAL\..\LIB\bitwise_operation.hBAL\..\MCAL\DIO.h)(0x00000000)
 I (HAL\..\MCAL\..\LIB\tm4c123gh6pm.h)(0x663687D3)
 I (HAL\..\MCAL\..\LIB\bitwise_operation.hCAL\..\MCAL\..\LIB\types.h)(0x00000000)
-I (HAL\..\MCAL\UART.h\AL\\ULTRASONIC.hnAL\..\MCAL\TIMERS.h)(0x00000000)
-I (HAL\..\MCAL\..\MCAL\DIO.hTAL\..\MCAL\SYSTICKTimer.h)(0x00000000)
-I (LIB\bitwise_operation.h)(0x663687D3)
+I (HAL\..\MCAL\UART.h\AL\ULTRASONIC.hoAL\..\MCAL\TIMERS.h)(0x00000000)
+I (HAL\..\MCAL\..\MCAL\DIO.hRAL\..\MCAL\SYSTICKTimer.hSAL\BUZZER.h)(0x00000000)
+I (C:\Users\user\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\tm4c123gh6pm.h)(0x550FE22C)
+I (C:\Users\user\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626F912E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x656A0472)
+I (C:\Users\user\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F912E)
+I (C:\Users\user\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F912E)
+I (C:\Users\user\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F912E)
+I (C:\Users\user\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626F912E)
+I (C:\Users\user\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x51B6D5F6)
 F (.\HAL\BLUETOOTH.c)(0x663687D3)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections-I./RTE/_Target_1-IC:/Users/user/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/user/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="539" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./bluetooth.o -MD)
-I (HAL\..\LIB\bitwise_operation.h.AL\..\MCAL\DIO.h)(0x00000000)
+I (HAL\..\LIB\bitwise_operation.hmAL\..\MCAL\DIO.h)(0x00000000)
 I (HAL\..\MCAL\..\LIB\tm4c123gh6pm.h)(0x663687D3)
 I (HAL\..\MCAL\..\LIB\bitwise_operation.hCAL\..\MCAL\..\LIB\types.h)(0x00000000)
 I (HAL\..\MCAL\UART.h)(0x663687D3)
@@ -18,10 +25,14 @@ I (HAL\..\MCAL\..\LIB\tm4c123gh6pm.h)(0x663687D3)
 I (HAL\..\MCAL\..\LIB\bitwise_operation.h\AL\..\MCAL\..\LIB\types.h)(0x00000000)
 I (HAL\..\MCAL\TIMERS.hiAL\..\MCAL\..\MCAL\DIO.h)(0x00000000)
 I (HAL\..\MCAL\SYSTICKTimer.h)(0x663687D3)
-F (.\HAL\ULTRASONIC.h)(0x663687D3)()
-F (.\MCAL\DIO.c)(0x663687D3)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections-I./RTE/_Target_1-IC:/Users/user/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/user/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="539" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./dio.o -MD)
+F (.\HAL\ULTRASONIC.h)(0x6636A1F2)()
+F (.\HAL\BUZZER.c)(0x66369ED5)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections-I./RTE/_Target_1-IC:/Users/user/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/user/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="539" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./buzzer.o -MD)
+I (HAL\..\MCAL\..\LIB\tm4c123gh6pm.h)(0x663687D3)
+I (HAL\..\MCAL\..\LIB\bitwise_operation.hOAL\..\MCAL\..\LIB\types.h)(0x00000000)
+F (.\HAL\BUZZER.h)(0x6636A1FE)()
+F (.\MCAL\DIO.c)(0x6636A5E2)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections-I./RTE/_Target_1-IC:/Users/user/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/user/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="539" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./dio.o -MD)
 I (MCAL\..\LIB\bitwise_operation.h\CAL\..\LIB\types.h)(0x00000000)
-F (.\MCAL\DIO.h)(0x663687D3)()
+F (.\MCAL\DIO.h)(0x6636A581)()
 F (.\MCAL\INTERRUPT.c)(0x663687D3)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections-I./RTE/_Target_1-IC:/Users/user/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/user/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="539" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./interrupt.o -MD)
 I (MCAL\..\LIB\tm4c123gh6pm.hRCAL\..\LIB\bitwise_operation.h)(0x00000000)
 I (MCAL\..\LIB\types.h)(0x663687D3)
@@ -30,7 +41,7 @@ F (.\MCAL\SYSTICKTimer.c)(0x663687D3)(-xc -std=c99 --target=arm-arm-none-eabi -m
 I (MCAL\..\LIB\tm4c123gh6pm.hSCAL\..\LIB\bitwise_operation.h)(0x00000000)
 I (MCAL\..\LIB\types.h)(0x663687D3)
 F (.\MCAL\SYSTICKTimer.h)(0x663687D3)()
-F (.\MCAL\TIMERS.c)(0x66369605)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections-I./RTE/_Target_1-IC:/Users/user/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/user/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="539" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./timers.o -MD)
+F (.\MCAL\TIMERS.c)(0x6636A0D6)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections-I./RTE/_Target_1-IC:/Users/user/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/user/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="539" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./timers.o -MD)
 I (MCAL\..\MCAL\..\LIB\tm4c123gh6pm.h)(0x663687D3)
 I (MCAL\..\MCAL\..\LIB\bitwise_operation.hDCAL\..\MCAL\..\LIB\types.h)(0x00000000)
 F (.\MCAL\TIMERS.h)(0x663687D3)()

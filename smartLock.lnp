@@ -2,6 +2,7 @@
 ".\main.o"
 ".\bluetooth.o"
 ".\ultrasonic.o"
+".\buzzer.o"
 ".\dio.o"
 ".\interrupt.o"
 ".\systicktimer.o"

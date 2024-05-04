@@ -66,11 +66,6 @@ uint8 DIO_SetupDirection(uint8 PORT,uint8 direction,uint8 pin, uint8 Res_type){
       }
       else if(direction == IN){
           Clear_Bit(GPIO_PORTA_DIR_R,pin);
-          
-          if(Res_type==PUR)
-            Set_Bit(GPIO_PORTA_PUR_R,pin);
-          else if(Res_type==PDR)
-            Set_Bit(GPIO_PORTA_PDR_R,pin);
       }
      Set_Bit(GPIO_PORTA_DEN_R,pin);
    }
@@ -82,11 +77,7 @@ uint8 DIO_SetupDirection(uint8 PORT,uint8 direction,uint8 pin, uint8 Res_type){
       }
       else if(direction == IN){
           Clear_Bit(GPIO_PORTB_DIR_R,pin);
-          
-          if(Res_type==PUR)
-            Set_Bit(GPIO_PORTB_PUR_R,pin);
-          else if(Res_type==PDR)
-            Set_Bit(GPIO_PORTB_PDR_R,pin);
+         
       }
       Set_Bit(GPIO_PORTB_DEN_R,pin);
    }
@@ -98,10 +89,6 @@ uint8 DIO_SetupDirection(uint8 PORT,uint8 direction,uint8 pin, uint8 Res_type){
       }
       else if(direction == IN){
           Clear_Bit(GPIO_PORTC_DIR_R,pin);
-          if(Res_type==PUR)
-            Set_Bit(GPIO_PORTC_PUR_R,pin);
-          else if(Res_type==PDR)
-            Set_Bit(GPIO_PORTC_PDR_R,pin);
       }
       Set_Bit(GPIO_PORTC_DEN_R,pin);
    }
@@ -113,10 +100,6 @@ uint8 DIO_SetupDirection(uint8 PORT,uint8 direction,uint8 pin, uint8 Res_type){
       }
       else if(direction == IN){
           Clear_Bit(GPIO_PORTD_DIR_R,pin);
-          if(Res_type==PUR)
-            Set_Bit(GPIO_PORTD_PUR_R,pin);
-          else if(Res_type==PDR)
-            Set_Bit(GPIO_PORTD_PDR_R,pin);
       }
       Set_Bit(GPIO_PORTD_DEN_R,pin);
    }
@@ -128,10 +111,6 @@ uint8 DIO_SetupDirection(uint8 PORT,uint8 direction,uint8 pin, uint8 Res_type){
       }
       else if(direction == IN){
           Clear_Bit(GPIO_PORTE_DIR_R,pin);
-          if(Res_type==PUR)
-            Set_Bit(GPIO_PORTE_PUR_R,pin);
-          else if(Res_type==PDR)
-            Set_Bit(GPIO_PORTE_PDR_R,pin);
       }
       Set_Bit(GPIO_PORTE_DEN_R,pin);
    }
@@ -143,10 +122,6 @@ uint8 DIO_SetupDirection(uint8 PORT,uint8 direction,uint8 pin, uint8 Res_type){
       }
       else if(direction == IN){
           Clear_Bit(GPIO_PORTF_DIR_R,pin);
-          if(Res_type==PUR)
-            Set_Bit(GPIO_PORTF_PUR_R,pin);
-          else if(Res_type==PDR)
-            Set_Bit(GPIO_PORTF_PDR_R,pin);
       }
       Set_Bit(GPIO_PORTF_DEN_R,pin);
    }
