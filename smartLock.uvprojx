@@ -125,47 +125,6 @@
             <HexOffset>0</HexOffset>
             <Oh166RecLen>16</Oh166RecLen>
           </OPTHX>
-          <Simulator>
-            <UseSimulator>0</UseSimulator>
-            <LoadApplicationAtStartup>1</LoadApplicationAtStartup>
-            <RunToMain>1</RunToMain>
-            <RestoreBreakpoints>1</RestoreBreakpoints>
-            <RestoreWatchpoints>1</RestoreWatchpoints>
-            <RestoreMemoryDisplay>1</RestoreMemoryDisplay>
-            <RestoreFunctions>1</RestoreFunctions>
-            <RestoreToolbox>1</RestoreToolbox>
-            <LimitSpeedToRealTime>0</LimitSpeedToRealTime>
-            <RestoreSysVw>1</RestoreSysVw>
-          </Simulator>
-          <Target>
-            <UseTarget>1</UseTarget>
-            <LoadApplicationAtStartup>1</LoadApplicationAtStartup>
-            <RunToMain>1</RunToMain>
-            <RestoreBreakpoints>1</RestoreBreakpoints>
-            <RestoreWatchpoints>1</RestoreWatchpoints>
-            <RestoreMemoryDisplay>1</RestoreMemoryDisplay>
-            <RestoreFunctions>0</RestoreFunctions>
-            <RestoreToolbox>1</RestoreToolbox>
-            <RestoreTracepoints>1</RestoreTracepoints>
-            <RestoreSysVw>1</RestoreSysVw>
-          </Target>
-          <RunDebugAfterBuild>0</RunDebugAfterBuild>
-          <TargetSelection>0</TargetSelection>
-          <SimDlls>
-            <CpuDll></CpuDll>
-            <CpuDllArguments></CpuDllArguments>
-            <PeripheralDll></PeripheralDll>
-            <PeripheralDllArguments></PeripheralDllArguments>
-            <InitializationFile></InitializationFile>
-          </SimDlls>
-          <TargetDlls>
-            <CpuDll></CpuDll>
-            <CpuDllArguments></CpuDllArguments>
-            <PeripheralDll></PeripheralDll>
-            <PeripheralDllArguments></PeripheralDllArguments>
-            <InitializationFile></InitializationFile>
-            <Driver>BIN\UL2CM3.DLL</Driver>
-          </TargetDlls>
         </DebugOption>
         <Utilities>
           <Flash1>
@@ -173,7 +132,7 @@
             <UseExternalTool>0</UseExternalTool>
             <RunIndependent>0</RunIndependent>
             <UpdateFlashBeforeDebugging>1</UpdateFlashBeforeDebugging>
-            <Capability>0</Capability>
+            <Capability>1</Capability>
             <DriverSelection>-1</DriverSelection>
           </Flash1>
           <bUseTDR>1</bUseTDR>
@@ -422,10 +381,142 @@
       </TargetOption>
       <Groups>
         <Group>
-          <GroupName>Source Group 1</GroupName>
+          <GroupName>Source Group</GroupName>
+          <Files>
+            <File>
+              <FileName>main.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\main.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>HAL</GroupName>
+          <Files>
+            <File>
+              <FileName>BLUETOOTH.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\HAL\BLUETOOTH.h</FilePath>
+            </File>
+            <File>
+              <FileName>BLUETOOTH.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\HAL\BLUETOOTH.c</FilePath>
+            </File>
+            <File>
+              <FileName>ULTRASONIC.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\HAL\ULTRASONIC.h</FilePath>
+            </File>
+            <File>
+              <FileName>ULTRASONIC.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\HAL\ULTRASONIC.c</FilePath>
+            </File>
+            <File>
+              <FileName>BUZZER.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\HAL\BUZZER.c</FilePath>
+            </File>
+            <File>
+              <FileName>BUZZER.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\HAL\BUZZER.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>MCAL</GroupName>
+          <Files>
+            <File>
+              <FileName>DIO.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\MCAL\DIO.h</FilePath>
+            </File>
+            <File>
+              <FileName>DIO.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\MCAL\DIO.c</FilePath>
+            </File>
+            <File>
+              <FileName>INTERRUPT.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\MCAL\INTERRUPT.h</FilePath>
+            </File>
+            <File>
+              <FileName>INTERRUPT.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\MCAL\INTERRUPT.c</FilePath>
+            </File>
+            <File>
+              <FileName>SYSTICKTimer.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\MCAL\SYSTICKTimer.h</FilePath>
+            </File>
+            <File>
+              <FileName>SYSTICKTimer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\MCAL\SYSTICKTimer.c</FilePath>
+            </File>
+            <File>
+              <FileName>TIMERS.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\MCAL\TIMERS.h</FilePath>
+            </File>
+            <File>
+              <FileName>TIMERS.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\MCAL\TIMERS.c</FilePath>
+            </File>
+            <File>
+              <FileName>UART.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\MCAL\UART.h</FilePath>
+            </File>
+            <File>
+              <FileName>UART.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\MCAL\UART.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>LIB</GroupName>
+          <Files>
+            <File>
+              <FileName>bitwise_operation.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\LIB\bitwise_operation.h</FilePath>
+            </File>
+            <File>
+              <FileName>tm4c123gh6pm.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\LIB\tm4c123gh6pm.h</FilePath>
+            </File>
+            <File>
+              <FileName>types.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\LIB\types.h</FilePath>
+            </File>
+          </Files>
         </Group>
       </Groups>
     </Target>
   </Targets>
+
+  <RTE>
+    <apis/>
+    <components/>
+    <files/>
+  </RTE>
+
+  <LayerInfo>
+    <Layers>
+      <Layer>
+        <LayName>smartLock</LayName>
+        <LayPrjMark>1</LayPrjMark>
+      </Layer>
+    </Layers>
+  </LayerInfo>
 
 </Project>
