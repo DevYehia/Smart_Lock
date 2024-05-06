@@ -42,8 +42,8 @@ void Timer1_init(void){
 
 void Timer1_setDelay(void){
     //For one minute	
-  TIMER1_TAILR_R =960000000;
-  //TIMER1_TBILR_R = 0x18;
+  TIMER1_TAILR_R =0x1869ff;
+  TIMER1_TBILR_R = 0x18;
 }
 
 

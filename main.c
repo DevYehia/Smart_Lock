@@ -1,7 +1,13 @@
 #include "HAL/BLUETOOTH.h"
 #include "HAL/ULTRASONIC.h"
 #include "HAL/BUZZER.h"
-#include "tm4c123gh6pm.h" 
+
+
+uint8 enter_pass_msg[] = "Please Enter the Password: \n";
+uint8 welcome_msg[] = "Welcome Home\n";
+uint8 Ourswitch[] = "Switched On\n";
+
+
 #define PASSWORD_LENGTH 4
 #define MAX_NUM_TRIES 3
 
@@ -10,7 +16,7 @@
 #define WINDOWS_PORT       PORT_E
 
 
-#define KITCHEN_DOOR_LED   PIN0
+#define KITCHEN_DOOR_LED   PIN3
 #define FRONT_DOOR_LED     PIN1
 #define GARAGE_DOOR_LED    PIN2
 
@@ -35,6 +41,7 @@ void initLEDs(void){
 void init(void){
 	
 	initLEDs();
+	
 	SysTickDisable();
 	SysTickPeriodSet(PERIOD_DELAY_10us,uS_UNIT); //10 micro second
 	Timer1_init();
@@ -53,9 +60,12 @@ void init(void){
 
 uint8 getPassword(void){
 	char c;
-    for(uint8 cntr = 0 ; cntr < PASSWORD_LENGTH ; cntr++){
+	uint8 counter=0;
+    while( counter < PASSWORD_LENGTH){
 		c = bluetooth_Read();
-		input[cntr] = c;
+		if(c==0x0D || c == ' ') continue;
+		input[counter] = c;
+		counter++;
 	}
 	for(uint8 i = 0 ; i < PASSWORD_LENGTH ; i++){
 		if(input[i] != password[i]){
@@ -69,23 +79,25 @@ uint8 getPassword(void){
 
 int main(){
     init();
-	bluetooth_Write_String("Please Enter the Password: ");
+	bluetooth_Write_String(enter_pass_msg);
 	int retries = 0;
 	while(1){
 		while(retries < MAX_NUM_TRIES){
 			if(getPassword() == 1){
-				bluetooth_Write_String("Welcome Home\n");
+				bluetooth_Write_String(welcome_msg);
 				break;
 			}
 			bluetooth_Write_String("Wrong Password Try Again!\n");
 			retries++;
 		}
 		if(retries == 3){
+			buzzerON(BUZZER_PORT,BUZZER_PIN);
 			Timer2_start();
 			while(Get_Bit(TIMER2_RIS_R,0) == 0);
 			Set_Bit(TIMER2_ICR_R,0);
 			Timer2_stop();
 			retries = 0;
+			buzzerOFF(BUZZER_PORT,BUZZER_PIN);
 		}
 		else{
 			break;
@@ -96,12 +108,13 @@ int main(){
 		bluetooth_Write_String("  3: open kitchen window   4: open outside window  5: close kitchen door\n");
 		bluetooth_Write_String("  6: close garage door     7: close front door     8: close kitchen window\n");
 		bluetooth_Write_String("  9: close outside window\n");
-	    char choice;
+	  char choice;
 		while (1) {
-			char choice = bluetooth_Read(); 
+			choice = bluetooth_Read(); 
 			if (choice >= '0' && choice <= '9') { 
 							break; 
 			}
+			else if(choice==0x0D || choice == ' ') continue;
 			else{
 				bluetooth_Write_String("Wrong Option, Try Again!!\n");
 			}
@@ -110,43 +123,43 @@ int main(){
         switch (choice) {
                         case '0':
 							if (DIO_WritePin(DOORS_PORT, LOGIC_HIGH, KITCHEN_DOOR_LED) == 0)
-								bluetooth_Write_String("Kitchen door opened successfully!");
+								bluetooth_Write_String("Kitchen door opened successfully!\n");
                             break;
                         case '1':
 							if (DIO_WritePin(DOORS_PORT, LOGIC_HIGH, GARAGE_DOOR_LED) == 0)
-								bluetooth_Write_String("Garage door opened successfully!");
+								bluetooth_Write_String("Garage door opened successfully!\n");
                             break;
                         case '2':
 							if (DIO_WritePin(DOORS_PORT, LOGIC_HIGH, FRONT_DOOR_LED) == 0)
-								bluetooth_Write_String("Front door opened successfully!");
+								bluetooth_Write_String("Front door opened successfully!\n");
                             break;
                         case '3':
 							if (DIO_WritePin(WINDOWS_PORT, LOGIC_HIGH, KITCHEN_WINDOW_LED) == 0)
-								bluetooth_Write_String("Kitchen window opened successfully!");
+								bluetooth_Write_String("Kitchen window opened successfully!\n");
                             break;
                         case '4':
 							if (DIO_WritePin(WINDOWS_PORT, LOGIC_HIGH, OUTSIDE_WINDOW_LED) == 0)
-								bluetooth_Write_String("Outside window opened successfully!");
+								bluetooth_Write_String("Outside window opened successfully!\n");
                             break;
 						case '5':
 							if (DIO_WritePin(DOORS_PORT, LOGIC_LOW, KITCHEN_DOOR_LED) == 0)
-								bluetooth_Write_String("Kitchen door closed successfully!");
+								bluetooth_Write_String("Kitchen door closed successfully!\n");
 							break;
 						case '6':
 							if (DIO_WritePin(DOORS_PORT, LOGIC_LOW, GARAGE_DOOR_LED) == 0)
-								bluetooth_Write_String("Garage door closed successfully!");
+								bluetooth_Write_String("Garage door closed successfully!\n");
 							break;
 						case '7':
 							if (DIO_WritePin(DOORS_PORT, LOGIC_LOW, FRONT_DOOR_LED) == 0)
-								bluetooth_Write_String("Front door closed successfully!");
+								bluetooth_Write_String("Front door closed successfully!\n");
 							break;
 						case '8':
 							if (DIO_WritePin(WINDOWS_PORT, LOGIC_LOW, KITCHEN_WINDOW_LED) == 0)
-								bluetooth_Write_String("Kitchen window closed successfully!");
+								bluetooth_Write_String("Kitchen window closed successfully!\n");
 							break;
 						case '9':
 							if (DIO_WritePin(WINDOWS_PORT, LOGIC_LOW, OUTSIDE_WINDOW_LED) == 0 )
-								bluetooth_Write_String("Outside window closed successfully!");
+								bluetooth_Write_String("Outside window closed successfully!\n");
 							break;
 					}
 			}
@@ -164,7 +177,7 @@ unsigned long i = 0;
 
 
 
-void SystickHandler(void){
+void SysTick_Handler(void){
 
   
   uint32 i=0;
@@ -177,7 +190,7 @@ void SystickHandler(void){
 }
 
 
-void TIMER0_HANDLER(void){
+void TIMER0A_Handler(void){
   
   if(Get_Bit(GPIO_PORTB_DATA_R,ULTRASONIC_ECHO_PIN))
   {
@@ -211,7 +224,7 @@ void TIMER0_HANDLER(void){
     TIMER0_ICR_R = 0x04;            /* clear timer0A capture flag */
 }
 
-void TIMER1_HANDLER(void){
+void TIMER1A_Handler(void){
   
   DIO_WritePin(ULTRASONIC_TRIGGER_PORT,LOGIC_HIGH,ULTRASONIC_TRIGGER_PIN);
   Timer1_stop();

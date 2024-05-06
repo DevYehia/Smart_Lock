@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\smartLock.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\smartLock.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6210000: Last Updated: Sun May  5 00:17:33 2024
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6190004: Last Updated: Mon May  6 00:59:56 2024
 <BR><P>
 <H3>Maximum Stack Usage =        116 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -26,7 +26,6 @@ Mutually Recursive functions
  <LI><a href="#[6]">SVC_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[6]">SVC_Handler</a><BR>
  <LI><a href="#[7]">DebugMon_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[7]">DebugMon_Handler</a><BR>
  <LI><a href="#[8]">PendSV_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[8]">PendSV_Handler</a><BR>
- <LI><a href="#[9]">SysTick_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[9]">SysTick_Handler</a><BR>
  <LI><a href="#[a]">GPIOA_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[a]">GPIOA_Handler</a><BR>
  <LI><a href="#[b]">GPIOB_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[b]">GPIOB_Handler</a><BR>
  <LI><a href="#[c]">GPIOC_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[c]">GPIOC_Handler</a><BR>
@@ -46,9 +45,7 @@ Mutually Recursive functions
  <LI><a href="#[1a]">ADC0SS2_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[1a]">ADC0SS2_Handler</a><BR>
  <LI><a href="#[1b]">ADC0SS3_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[1b]">ADC0SS3_Handler</a><BR>
  <LI><a href="#[1c]">WDT0_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[1c]">WDT0_Handler</a><BR>
- <LI><a href="#[1d]">TIMER0A_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[1d]">TIMER0A_Handler</a><BR>
  <LI><a href="#[1e]">TIMER0B_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[1e]">TIMER0B_Handler</a><BR>
- <LI><a href="#[1f]">TIMER1A_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[1f]">TIMER1A_Handler</a><BR>
  <LI><a href="#[20]">TIMER1B_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[20]">TIMER1B_Handler</a><BR>
  <LI><a href="#[21]">TIMER2A_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[21]">TIMER2A_Handler</a><BR>
  <LI><a href="#[22]">TIMER2B_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[22]">TIMER2B_Handler</a><BR>
@@ -220,11 +217,11 @@ Function Pointers
  <LI><a href="#[41]">SSI3_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
  <LI><a href="#[6]">SVC_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
  <LI><a href="#[26]">SYSCTL_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
- <LI><a href="#[9]">SysTick_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
+ <LI><a href="#[9]">SysTick_Handler</a> from main.o(.text.SysTick_Handler) referenced from startup_tm4c123.o(RESET)
  <LI><a href="#[76]">SystemInit</a> from system_tm4c123.o(.text.SystemInit) referenced from startup_tm4c123.o(.text)
- <LI><a href="#[1d]">TIMER0A_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
+ <LI><a href="#[1d]">TIMER0A_Handler</a> from main.o(.text.TIMER0A_Handler) referenced from startup_tm4c123.o(RESET)
  <LI><a href="#[1e]">TIMER0B_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
- <LI><a href="#[1f]">TIMER1A_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
+ <LI><a href="#[1f]">TIMER1A_Handler</a> from main.o(.text.TIMER1A_Handler) referenced from startup_tm4c123.o(RESET)
  <LI><a href="#[20]">TIMER1B_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
  <LI><a href="#[21]">TIMER2A_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
  <LI><a href="#[22]">TIMER2B_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
@@ -275,13 +272,13 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main
 </UL>
 
-<P><STRONG><a name="[7a]"></a>__scatterload_rt2</STRONG> (Thumb, 84 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
+<P><STRONG><a name="[7a]"></a>__scatterload_rt2</STRONG> (Thumb, 44 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry
 </UL>
 
-<P><STRONG><a name="[a5]"></a>__scatterload_rt2_thumb_only</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
+<P><STRONG><a name="[a9]"></a>__scatterload_rt2_thumb_only</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
 
-<P><STRONG><a name="[a6]"></a>__scatterload_loop</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
+<P><STRONG><a name="[aa]"></a>__scatterload_null</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
 
 <P><STRONG><a name="[7b]"></a>__scatterload_copy</STRONG> (Thumb, 26 bytes, Stack size unknown bytes, __scatter_copy.o(!!handler_copy), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload_copy
@@ -289,9 +286,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload_copy
 </UL>
 
-<P><STRONG><a name="[a7]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, __scatter.o(!!handler_null), UNUSED)
-
-<P><STRONG><a name="[a8]"></a>__scatterload_zeroinit</STRONG> (Thumb, 28 bytes, Stack size unknown bytes, __scatter_zi.o(!!handler_zi), UNUSED)
+<P><STRONG><a name="[ab]"></a>__scatterload_zeroinit</STRONG> (Thumb, 28 bytes, Stack size unknown bytes, __scatter_zi.o(!!handler_zi), UNUSED)
 
 <P><STRONG><a name="[81]"></a>__rt_lib_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit.o(.ARM.Collect$$libinit$$00000000))
 <BR><BR>[Called By]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_li
@@ -301,72 +296,72 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_init
 </UL>
 
-<P><STRONG><a name="[a9]"></a>__rt_lib_init_alloca_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000030))
+<P><STRONG><a name="[ac]"></a>__rt_lib_init_alloca_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000030))
 
-<P><STRONG><a name="[aa]"></a>__rt_lib_init_argv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002E))
+<P><STRONG><a name="[ad]"></a>__rt_lib_init_argv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002E))
 
-<P><STRONG><a name="[ab]"></a>__rt_lib_init_atexit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001D))
+<P><STRONG><a name="[ae]"></a>__rt_lib_init_atexit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001D))
 
-<P><STRONG><a name="[ac]"></a>__rt_lib_init_clock_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000023))
+<P><STRONG><a name="[af]"></a>__rt_lib_init_clock_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000023))
 
-<P><STRONG><a name="[ad]"></a>__rt_lib_init_cpp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000034))
+<P><STRONG><a name="[b0]"></a>__rt_lib_init_cpp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000034))
 
-<P><STRONG><a name="[ae]"></a>__rt_lib_init_exceptions_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000032))
+<P><STRONG><a name="[b1]"></a>__rt_lib_init_exceptions_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000032))
 
-<P><STRONG><a name="[af]"></a>__rt_lib_init_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000021))
+<P><STRONG><a name="[b2]"></a>__rt_lib_init_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000021))
 
-<P><STRONG><a name="[b0]"></a>__rt_lib_init_getenv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000025))
+<P><STRONG><a name="[b3]"></a>__rt_lib_init_getenv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000025))
 
-<P><STRONG><a name="[b1]"></a>__rt_lib_init_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000C))
+<P><STRONG><a name="[b4]"></a>__rt_lib_init_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000C))
 
-<P><STRONG><a name="[b2]"></a>__rt_lib_init_lc_collate_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000013))
+<P><STRONG><a name="[b5]"></a>__rt_lib_init_lc_collate_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000013))
 
-<P><STRONG><a name="[b3]"></a>__rt_lib_init_lc_ctype_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000015))
+<P><STRONG><a name="[b6]"></a>__rt_lib_init_lc_ctype_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000015))
 
-<P><STRONG><a name="[b4]"></a>__rt_lib_init_lc_monetary_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000017))
+<P><STRONG><a name="[b7]"></a>__rt_lib_init_lc_monetary_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000017))
 
-<P><STRONG><a name="[b5]"></a>__rt_lib_init_lc_numeric_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000019))
+<P><STRONG><a name="[b8]"></a>__rt_lib_init_lc_numeric_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000019))
 
-<P><STRONG><a name="[b6]"></a>__rt_lib_init_lc_time_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001B))
+<P><STRONG><a name="[b9]"></a>__rt_lib_init_lc_time_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001B))
 
-<P><STRONG><a name="[b7]"></a>__rt_lib_init_preinit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000006))
+<P><STRONG><a name="[ba]"></a>__rt_lib_init_preinit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000006))
 
-<P><STRONG><a name="[b8]"></a>__rt_lib_init_rand_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000010))
+<P><STRONG><a name="[bb]"></a>__rt_lib_init_rand_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000010))
 
-<P><STRONG><a name="[b9]"></a>__rt_lib_init_relocate_pie_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000004))
+<P><STRONG><a name="[bc]"></a>__rt_lib_init_relocate_pie_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000004))
 
-<P><STRONG><a name="[ba]"></a>__rt_lib_init_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000035))
+<P><STRONG><a name="[bd]"></a>__rt_lib_init_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000035))
 
-<P><STRONG><a name="[bb]"></a>__rt_lib_init_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001F))
+<P><STRONG><a name="[be]"></a>__rt_lib_init_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001F))
 
-<P><STRONG><a name="[bc]"></a>__rt_lib_init_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000027))
+<P><STRONG><a name="[bf]"></a>__rt_lib_init_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000027))
 
-<P><STRONG><a name="[bd]"></a>__rt_lib_init_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000E))
+<P><STRONG><a name="[c0]"></a>__rt_lib_init_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000E))
 
 <P><STRONG><a name="[86]"></a>__rt_lib_shutdown</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown.o(.ARM.Collect$$libshutdown$$00000000))
 <BR><BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_exit_ls
 </UL>
 
-<P><STRONG><a name="[be]"></a>__rt_lib_shutdown_cpp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000002))
+<P><STRONG><a name="[c1]"></a>__rt_lib_shutdown_cpp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000002))
 
-<P><STRONG><a name="[bf]"></a>__rt_lib_shutdown_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000007))
+<P><STRONG><a name="[c2]"></a>__rt_lib_shutdown_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000007))
 
-<P><STRONG><a name="[c0]"></a>__rt_lib_shutdown_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F))
+<P><STRONG><a name="[c3]"></a>__rt_lib_shutdown_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F))
 
-<P><STRONG><a name="[c1]"></a>__rt_lib_shutdown_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000010))
+<P><STRONG><a name="[c4]"></a>__rt_lib_shutdown_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000010))
 
-<P><STRONG><a name="[c2]"></a>__rt_lib_shutdown_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A))
+<P><STRONG><a name="[c5]"></a>__rt_lib_shutdown_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A))
 
-<P><STRONG><a name="[c3]"></a>__rt_lib_shutdown_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000004))
+<P><STRONG><a name="[c6]"></a>__rt_lib_shutdown_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000004))
 
-<P><STRONG><a name="[c4]"></a>__rt_lib_shutdown_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C))
+<P><STRONG><a name="[c7]"></a>__rt_lib_shutdown_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C))
 
 <P><STRONG><a name="[79]"></a>__rt_entry</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry.o(.ARM.Collect$$rtentry$$00000000))
 <BR><BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload_rt2
 <LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main
 </UL>
 
-<P><STRONG><a name="[c5]"></a>__rt_entry_presh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000002))
+<P><STRONG><a name="[c8]"></a>__rt_entry_presh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000002))
 
 <P><STRONG><a name="[7e]"></a>__rt_entry_sh</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry4.o(.ARM.Collect$$rtentry$$00000004))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8 + Unknown Stack Size
@@ -379,7 +374,7 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init
 </UL>
 
-<P><STRONG><a name="[c6]"></a>__rt_entry_postsh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000009))
+<P><STRONG><a name="[c9]"></a>__rt_entry_postsh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000009))
 
 <P><STRONG><a name="[82]"></a>__rt_entry_main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000D))
 <BR><BR>[Stack]<UL><LI>Max Depth = 116 + Unknown Stack Size
@@ -389,7 +384,7 @@ Global Symbols
 <LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[c7]"></a>__rt_entry_postli_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000C))
+<P><STRONG><a name="[ca]"></a>__rt_entry_postli_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000C))
 
 <P><STRONG><a name="[8b]"></a>__rt_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit.o(.ARM.Collect$$rtexit$$00000000))
 <BR><BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit
@@ -399,7 +394,7 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_shutdown
 </UL>
 
-<P><STRONG><a name="[c8]"></a>__rt_exit_prels_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit2.o(.ARM.Collect$$rtexit$$00000002))
+<P><STRONG><a name="[cb]"></a>__rt_exit_prels_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit2.o(.ARM.Collect$$rtexit$$00000002))
 
 <P><STRONG><a name="[87]"></a>__rt_exit_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit2.o(.ARM.Collect$$rtexit$$00000004))
 <BR><BR>[Calls]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_exit
@@ -461,13 +456,6 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PendSV_Handler
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PendSV_Handler
-</UL>
-<BR>[Address Reference Count : 1]<UL><LI> startup_tm4c123.o(RESET)
-</UL>
-<P><STRONG><a name="[9]"></a>SysTick_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, startup_tm4c123.o(.text))
-<BR><BR>[Calls]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Handler
-</UL>
-<BR>[Called By]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Handler
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_tm4c123.o(RESET)
 </UL>
@@ -604,24 +592,10 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_tm4c123.o(RESET)
 </UL>
-<P><STRONG><a name="[1d]"></a>TIMER0A_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, startup_tm4c123.o(.text))
-<BR><BR>[Calls]<UL><LI><a href="#[1d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER0A_Handler
-</UL>
-<BR>[Called By]<UL><LI><a href="#[1d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER0A_Handler
-</UL>
-<BR>[Address Reference Count : 1]<UL><LI> startup_tm4c123.o(RESET)
-</UL>
 <P><STRONG><a name="[1e]"></a>TIMER0B_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, startup_tm4c123.o(.text))
 <BR><BR>[Calls]<UL><LI><a href="#[1e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER0B_Handler
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER0B_Handler
-</UL>
-<BR>[Address Reference Count : 1]<UL><LI> startup_tm4c123.o(RESET)
-</UL>
-<P><STRONG><a name="[1f]"></a>TIMER1A_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, startup_tm4c123.o(.text))
-<BR><BR>[Calls]<UL><LI><a href="#[1f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER1A_Handler
-</UL>
-<BR>[Called By]<UL><LI><a href="#[1f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER1A_Handler
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_tm4c123.o(RESET)
 </UL>
@@ -1231,11 +1205,11 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__user_setup_stackheap
 </UL>
 
-<P><STRONG><a name="[c9]"></a>__use_two_region_memory</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
+<P><STRONG><a name="[cc]"></a>__use_two_region_memory</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
 
-<P><STRONG><a name="[ca]"></a>__rt_heap_escrow$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
+<P><STRONG><a name="[cd]"></a>__rt_heap_escrow$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
 
-<P><STRONG><a name="[cb]"></a>__rt_heap_expand$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
+<P><STRONG><a name="[ce]"></a>__rt_heap_expand$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
 
 <P><STRONG><a name="[7f]"></a>__user_setup_stackheap</STRONG> (Thumb, 74 bytes, Stack size 8 bytes, sys_stackheap_outer.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8 + Unknown Stack Size
@@ -1256,219 +1230,283 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>
 
-<P><STRONG><a name="[cc]"></a>__user_libspace</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
+<P><STRONG><a name="[cf]"></a>__user_libspace</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
 
 <P><STRONG><a name="[89]"></a>__user_perproc_libspace</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, libspace.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__user_setup_stackheap
 </UL>
 
-<P><STRONG><a name="[cd]"></a>__user_perthread_libspace</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
+<P><STRONG><a name="[d0]"></a>__user_perthread_libspace</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
 
 <P><STRONG><a name="[88]"></a>_sys_exit</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, sys_exit.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_exit_exit
 </UL>
 
-<P><STRONG><a name="[ce]"></a>__I$use$semihosting</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
+<P><STRONG><a name="[d1]"></a>__I$use$semihosting</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
 
-<P><STRONG><a name="[cf]"></a>__use_no_semihosting_swi</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
+<P><STRONG><a name="[d2]"></a>__use_no_semihosting_swi</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
 
-<P><STRONG><a name="[d0]"></a>__semihosting_library_function</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, indicate_semi.o(.text), UNUSED)
+<P><STRONG><a name="[d3]"></a>__semihosting_library_function</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, indicate_semi.o(.text), UNUSED)
 
-<P><STRONG><a name="[8d]"></a>DIO_Init</STRONG> (Thumb, 526 bytes, Stack size 8 bytes, dio.o(.text.DIO_Init))
+<P><STRONG><a name="[95]"></a>DIO_Init</STRONG> (Thumb, 526 bytes, Stack size 8 bytes, dio.o(.text.DIO_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = DIO_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer0ACapture_init
-<LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ultrasonic_Init
-<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initLEDs
+<BR>[Called By]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer0ACapture_init
+<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ultrasonic_Init
+<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initLEDs
 </UL>
 
-<P><STRONG><a name="[8e]"></a>DIO_SetupDirection</STRONG> (Thumb, 682 bytes, Stack size 12 bytes, dio.o(.text.DIO_SetupDirection))
+<P><STRONG><a name="[96]"></a>DIO_SetupDirection</STRONG> (Thumb, 682 bytes, Stack size 12 bytes, dio.o(.text.DIO_SetupDirection))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = DIO_SetupDirection
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer0ACapture_init
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;buzzerInit
-<LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ultrasonic_Init
-<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initLEDs
+<BR>[Called By]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer0ACapture_init
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;buzzerInit
+<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ultrasonic_Init
+<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initLEDs
 </UL>
 
-<P><STRONG><a name="[a2]"></a>DIO_WritePin</STRONG> (Thumb, 438 bytes, Stack size 8 bytes, dio.o(.text.DIO_WritePin))
+<P><STRONG><a name="[8c]"></a>DIO_WritePin</STRONG> (Thumb, 438 bytes, Stack size 8 bytes, dio.o(.text.DIO_WritePin))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = DIO_WritePin
 </UL>
-<BR>[Called By]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init
+<BR>[Called By]<UL><LI><a href="#[1f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER1A_Handler
+<LI><a href="#[1d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER0A_Handler
+<LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Handler
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;buzzerOFF
+<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;buzzerON
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init
 </UL>
 
-<P><STRONG><a name="[99]"></a>SysTickDisable</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, systicktimer.o(.text.SysTickDisable))
-<BR><BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init
+<P><STRONG><a name="[8d]"></a>SysTickDisable</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, systicktimer.o(.text.SysTickDisable))
+<BR><BR>[Called By]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Handler
+<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init
 </UL>
 
-<P><STRONG><a name="[a1]"></a>SysTickEnable</STRONG> (Thumb, 46 bytes, Stack size 4 bytes, systicktimer.o(.text.SysTickEnable))
+<P><STRONG><a name="[93]"></a>SysTickEnable</STRONG> (Thumb, 46 bytes, Stack size 4 bytes, systicktimer.o(.text.SysTickEnable))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = SysTickEnable
 </UL>
-<BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init
+<BR>[Called By]<UL><LI><a href="#[1f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER1A_Handler
+<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init
 </UL>
 
-<P><STRONG><a name="[9a]"></a>SysTickPeriodSet</STRONG> (Thumb, 76 bytes, Stack size 8 bytes, systicktimer.o(.text.SysTickPeriodSet))
+<P><STRONG><a name="[a0]"></a>SysTickPeriodSet</STRONG> (Thumb, 76 bytes, Stack size 8 bytes, systicktimer.o(.text.SysTickPeriodSet))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = SysTickPeriodSet
 </UL>
-<BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init
+<BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init
 </UL>
 
+<P><STRONG><a name="[9]"></a>SysTick_Handler</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, main.o(.text.SysTick_Handler))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = SysTick_Handler &rArr; DIO_WritePin
+</UL>
+<BR>[Calls]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer1_start
+<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DIO_WritePin
+<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTickDisable
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup_tm4c123.o(RESET)
+</UL>
 <P><STRONG><a name="[76]"></a>SystemInit</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, system_tm4c123.o(.text.SystemInit))
 <BR>[Address Reference Count : 1]<UL><LI> startup_tm4c123.o(.text)
 </UL>
-<P><STRONG><a name="[8c]"></a>Timer0ACapture_init</STRONG> (Thumb, 156 bytes, Stack size 32 bytes, timers.o(.text.Timer0ACapture_init))
+<P><STRONG><a name="[1d]"></a>TIMER0A_Handler</STRONG> (Thumb, 268 bytes, Stack size 24 bytes, main.o(.text.TIMER0A_Handler))
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = TIMER0A_Handler &rArr; buzzerOFF &rArr; DIO_WritePin
+</UL>
+<BR>[Calls]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;buzzerOFF
+<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;buzzerON
+<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bluetooth_Write_String
+<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DIO_WritePin
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup_tm4c123.o(RESET)
+</UL>
+<P><STRONG><a name="[1f]"></a>TIMER1A_Handler</STRONG> (Thumb, 42 bytes, Stack size 16 bytes, main.o(.text.TIMER1A_Handler))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = TIMER1A_Handler &rArr; DIO_WritePin
+</UL>
+<BR>[Calls]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer1_stop
+<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DIO_WritePin
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTickEnable
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup_tm4c123.o(RESET)
+</UL>
+<P><STRONG><a name="[94]"></a>Timer0ACapture_init</STRONG> (Thumb, 156 bytes, Stack size 32 bytes, timers.o(.text.Timer0ACapture_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = Timer0ACapture_init &rArr; DIO_SetupDirection
 </UL>
-<BR>[Calls]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DIO_SetupDirection
-<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DIO_Init
+<BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DIO_SetupDirection
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DIO_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ultrasonic_Init
-</UL>
-
-<P><STRONG><a name="[a0]"></a>Timer1_enableInterrupt</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, timers.o(.text.Timer1_enableInterrupt))
-<BR><BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init
+<BR>[Called By]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ultrasonic_Init
 </UL>
 
-<P><STRONG><a name="[9b]"></a>Timer1_init</STRONG> (Thumb, 108 bytes, Stack size 0 bytes, timers.o(.text.Timer1_init))
-<BR><BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init
+<P><STRONG><a name="[a6]"></a>Timer1_enableInterrupt</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, timers.o(.text.Timer1_enableInterrupt))
+<BR><BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init
 </UL>
 
-<P><STRONG><a name="[9c]"></a>Timer1_setDelay</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, timers.o(.text.Timer1_setDelay))
-<BR><BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init
+<P><STRONG><a name="[a1]"></a>Timer1_init</STRONG> (Thumb, 108 bytes, Stack size 0 bytes, timers.o(.text.Timer1_init))
+<BR><BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init
 </UL>
 
-<P><STRONG><a name="[9e]"></a>Timer2_init</STRONG> (Thumb, 86 bytes, Stack size 0 bytes, timers.o(.text.Timer2_init))
-<BR><BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init
+<P><STRONG><a name="[a2]"></a>Timer1_setDelay</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, timers.o(.text.Timer1_setDelay))
+<BR><BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init
 </UL>
 
-<P><STRONG><a name="[9f]"></a>Timer2_setDelay</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, timers.o(.text.Timer2_setDelay))
-<BR><BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init
+<P><STRONG><a name="[8e]"></a>Timer1_start</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, timers.o(.text.Timer1_start))
+<BR><BR>[Called By]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Handler
 </UL>
 
-<P><STRONG><a name="[a3]"></a>Timer2_start</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, timers.o(.text.Timer2_start))
+<P><STRONG><a name="[92]"></a>Timer1_stop</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, timers.o(.text.Timer1_stop))
+<BR><BR>[Called By]<UL><LI><a href="#[1f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER1A_Handler
+</UL>
+
+<P><STRONG><a name="[a4]"></a>Timer2_init</STRONG> (Thumb, 86 bytes, Stack size 0 bytes, timers.o(.text.Timer2_init))
+<BR><BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init
+</UL>
+
+<P><STRONG><a name="[a5]"></a>Timer2_setDelay</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, timers.o(.text.Timer2_setDelay))
+<BR><BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init
+</UL>
+
+<P><STRONG><a name="[a7]"></a>Timer2_start</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, timers.o(.text.Timer2_start))
 <BR><BR>[Called By]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[a4]"></a>Timer2_stop</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, timers.o(.text.Timer2_stop))
+<P><STRONG><a name="[a8]"></a>Timer2_stop</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, timers.o(.text.Timer2_stop))
 <BR><BR>[Called By]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[8f]"></a>UART_Init</STRONG> (Thumb, 182 bytes, Stack size 24 bytes, uart.o(.text.UART_Init))
+<P><STRONG><a name="[97]"></a>UART_Init</STRONG> (Thumb, 182 bytes, Stack size 24 bytes, uart.o(.text.UART_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = UART_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_setBaudRate
+<BR>[Calls]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_setBaudRate
 </UL>
-<BR>[Called By]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bluetooth_Init
-</UL>
-
-<P><STRONG><a name="[90]"></a>UART_setBaudRate</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, uart.o(.text.UART_setBaudRate))
-<BR><BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Init
+<BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bluetooth_Init
 </UL>
 
-<P><STRONG><a name="[91]"></a>bluetooth_Init</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, bluetooth.o(.text.bluetooth_Init))
+<P><STRONG><a name="[98]"></a>UART_setBaudRate</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, uart.o(.text.UART_setBaudRate))
+<BR><BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Init
+</UL>
+
+<P><STRONG><a name="[99]"></a>bluetooth_Init</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, bluetooth.o(.text.bluetooth_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = bluetooth_Init &rArr; UART_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Init
+<BR>[Calls]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init
+<BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init
 </UL>
 
-<P><STRONG><a name="[96]"></a>bluetooth_Read</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, bluetooth.o(.text.bluetooth_Read))
+<P><STRONG><a name="[9d]"></a>bluetooth_Read</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, bluetooth.o(.text.bluetooth_Read))
 <BR><BR>[Called By]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getPassword
+<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getPassword
 </UL>
 
-<P><STRONG><a name="[93]"></a>bluetooth_Write</STRONG> (Thumb, 46 bytes, Stack size 4 bytes, bluetooth.o(.text.bluetooth_Write))
+<P><STRONG><a name="[9a]"></a>bluetooth_Write</STRONG> (Thumb, 46 bytes, Stack size 4 bytes, bluetooth.o(.text.bluetooth_Write))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = bluetooth_Write
 </UL>
-<BR>[Called By]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bluetooth_Write_String
+<BR>[Called By]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bluetooth_Write_String
 </UL>
 
-<P><STRONG><a name="[92]"></a>bluetooth_Write_String</STRONG> (Thumb, 34 bytes, Stack size 16 bytes, bluetooth.o(.text.bluetooth_Write_String))
+<P><STRONG><a name="[91]"></a>bluetooth_Write_String</STRONG> (Thumb, 34 bytes, Stack size 16 bytes, bluetooth.o(.text.bluetooth_Write_String))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = bluetooth_Write_String &rArr; bluetooth_Write
 </UL>
-<BR>[Calls]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bluetooth_Write
+<BR>[Calls]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bluetooth_Write
 </UL>
-<BR>[Called By]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR>[Called By]<UL><LI><a href="#[1d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER0A_Handler
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[94]"></a>buzzerInit</STRONG> (Thumb, 32 bytes, Stack size 16 bytes, buzzer.o(.text.buzzerInit))
+<P><STRONG><a name="[9b]"></a>buzzerInit</STRONG> (Thumb, 32 bytes, Stack size 16 bytes, buzzer.o(.text.buzzerInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = buzzerInit &rArr; DIO_SetupDirection
 </UL>
-<BR>[Calls]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DIO_SetupDirection
+<BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DIO_SetupDirection
 </UL>
-<BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init
+<BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init
 </UL>
 
-<P><STRONG><a name="[95]"></a>getPassword</STRONG> (Thumb, 148 bytes, Stack size 16 bytes, main.o(.text.getPassword))
+<P><STRONG><a name="[8f]"></a>buzzerOFF</STRONG> (Thumb, 30 bytes, Stack size 16 bytes, buzzer.o(.text.buzzerOFF))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = buzzerOFF &rArr; DIO_WritePin
+</UL>
+<BR>[Calls]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DIO_WritePin
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER0A_Handler
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[90]"></a>buzzerON</STRONG> (Thumb, 30 bytes, Stack size 16 bytes, buzzer.o(.text.buzzerON))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = buzzerON &rArr; DIO_WritePin
+</UL>
+<BR>[Calls]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DIO_WritePin
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER0A_Handler
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[9c]"></a>getPassword</STRONG> (Thumb, 168 bytes, Stack size 16 bytes, main.o(.text.getPassword))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = getPassword
 </UL>
-<BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bluetooth_Read
+<BR>[Calls]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bluetooth_Read
 </UL>
 <BR>[Called By]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[97]"></a>init</STRONG> (Thumb, 108 bytes, Stack size 16 bytes, main.o(.text.init))
+<P><STRONG><a name="[9e]"></a>init</STRONG> (Thumb, 108 bytes, Stack size 16 bytes, main.o(.text.init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 84<LI>Call Chain = init &rArr; ultrasonic_Init &rArr; Timer0ACapture_init &rArr; DIO_SetupDirection
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DIO_WritePin
-<LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTickEnable
-<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer1_enableInterrupt
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;buzzerInit
-<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer2_setDelay
-<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer2_init
-<LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ultrasonic_Init
-<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bluetooth_Init
-<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer1_setDelay
-<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer1_init
-<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTickPeriodSet
-<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTickDisable
-<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initLEDs
+<BR>[Calls]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DIO_WritePin
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTickEnable
+<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer1_enableInterrupt
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;buzzerInit
+<LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer2_setDelay
+<LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer2_init
+<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ultrasonic_Init
+<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bluetooth_Init
+<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer1_setDelay
+<LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer1_init
+<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTickPeriodSet
+<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTickDisable
+<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initLEDs
 </UL>
 <BR>[Called By]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[98]"></a>initLEDs</STRONG> (Thumb, 90 bytes, Stack size 32 bytes, main.o(.text.initLEDs))
+<P><STRONG><a name="[9f]"></a>initLEDs</STRONG> (Thumb, 90 bytes, Stack size 32 bytes, main.o(.text.initLEDs))
 <BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = initLEDs &rArr; DIO_SetupDirection
 </UL>
-<BR>[Calls]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DIO_SetupDirection
-<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DIO_Init
+<BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DIO_SetupDirection
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DIO_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init
+<BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init
 </UL>
 
-<P><STRONG><a name="[83]"></a>main</STRONG> (Thumb, 580 bytes, Stack size 32 bytes, main.o(.text.main))
+<P><STRONG><a name="[83]"></a>main</STRONG> (Thumb, 620 bytes, Stack size 32 bytes, main.o(.text.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 116<LI>Call Chain = main &rArr; init &rArr; ultrasonic_Init &rArr; Timer0ACapture_init &rArr; DIO_SetupDirection
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer2_stop
-<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer2_start
-<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bluetooth_Write_String
-<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bluetooth_Read
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getPassword
-<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DIO_WritePin
-<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init
+<BR>[Calls]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;buzzerOFF
+<LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer2_stop
+<LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer2_start
+<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;buzzerON
+<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bluetooth_Write_String
+<LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bluetooth_Read
+<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getPassword
+<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DIO_WritePin
+<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>
 
-<P><STRONG><a name="[9d]"></a>ultrasonic_Init</STRONG> (Thumb, 48 bytes, Stack size 24 bytes, ultrasonic.o(.text.ultrasonic_Init))
+<P><STRONG><a name="[a3]"></a>ultrasonic_Init</STRONG> (Thumb, 48 bytes, Stack size 24 bytes, ultrasonic.o(.text.ultrasonic_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = ultrasonic_Init &rArr; Timer0ACapture_init &rArr; DIO_SetupDirection
 </UL>
-<BR>[Calls]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer0ACapture_init
-<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DIO_SetupDirection
-<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DIO_Init
+<BR>[Calls]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer0ACapture_init
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DIO_SetupDirection
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DIO_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init
+<BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init
 </UL>
 
 <P><STRONG><a name="[7d]"></a>_fp_init</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, fpinit.o(x$fpl$fpinit))
 <BR><BR>[Called By]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init_fp_1
 </UL>
 
-<P><STRONG><a name="[d1]"></a>__fplib_config_fpu_vfp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, fpinit.o(x$fpl$fpinit), UNUSED)
+<P><STRONG><a name="[d4]"></a>__fplib_config_fpu_vfp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, fpinit.o(x$fpl$fpinit), UNUSED)
 
-<P><STRONG><a name="[d2]"></a>__fplib_config_pureend_doubles</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, fpinit.o(x$fpl$fpinit), UNUSED)
+<P><STRONG><a name="[d5]"></a>__fplib_config_pureend_doubles</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, fpinit.o(x$fpl$fpinit), UNUSED)
 <P>
 <H3>
 Local Symbols

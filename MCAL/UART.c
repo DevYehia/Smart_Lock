@@ -7,7 +7,7 @@ void UART_Init(uint8 uart_num){
     
   case UART5:{
     Set_Bit(SYSCTL_RCGCUART_R, 5);  /* enable clock to UART5 */
-    Set_Bit(SYSCTL_RCGCGPIO_R, 4);  /* enable clock to PORTE for PE4/Rx and RE5/Tx */
+    Set_Bit(SYSCTL_RCGCGPIO_R, 4);  /* enable clock to PORTE for PE4/Rx and RE5/Tx */ /*This port-pin config (commented) is not right ig*/
     while((SYSCTL_PRGPIO_R&0x00000010) == 0){};  //wait till clock is initialized
     
     /* UART0 initialization */
